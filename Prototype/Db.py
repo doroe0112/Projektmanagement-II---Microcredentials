@@ -1,8 +1,9 @@
 import mysql.connector
-import db
+import db_config
 
 def connect():
- conn = mysql.connector.connect(user=db.user, password=db.pw, database=db.name, unix_socket='/run/mysqld/mysqld.sock')
+ conn = mysql.connector.connect(user=db_config.user, password=db_config.pw, database=db_config.name, unix_socket=db_config.socket)
+
  c = conn.cursor()
  return [conn, c]
 

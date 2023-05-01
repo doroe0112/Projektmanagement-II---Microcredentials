@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Skill Semester {{semester}}{% endblock %}
+
+{% block content %}
+
+<h1>Auswahl Semester {{semester}}</h1>
+
+<a href="../">Zurück</a>
+
+<p>&nbsp;</p>
+
+<p>Wähle deine Skills für das {{semester}}. Semester:</p>
+
+<p>
+<form action="" method="post">
+{% for i in skills %}
+ <input type="checkbox" id="{{i[0]}}" autocomplete="off">
+ <label for="{{i[0]}}">{{i[1]}}</label><br />
+{% endfor %}
+</form>
+</p>
+
+{% endblock %}
