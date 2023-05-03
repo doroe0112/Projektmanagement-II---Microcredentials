@@ -6,6 +6,7 @@ from flask import render_template
 
 import Db
 import v
+from skillBits import skills
 
 #FLASK INIT
 app = Flask(__name__)
@@ -25,7 +26,7 @@ def semester(number):
  conn, c = Db.connect() 
  sql = "select * from mc order by 2"
  c.execute(sql)
- 
+
  result = []
  counter = 0;
  for row in c.fetchall():
@@ -33,6 +34,8 @@ def semester(number):
    result.append( [row[0], row[1], counter] )
    counter += 1
  Db.close(conn)
+
+ print(result)
 
  return render_template('sem.html', semester=number, skills=result)
 
@@ -58,7 +61,7 @@ def create():
  conn.commit()
 
  sql = "insert into mc(skillname, semester) values(%s, %s)"
- c.executemany(sql, v.skills)
+ c.executemany(sql, skills)
  conn.commit()
 
  Db.close(conn)
