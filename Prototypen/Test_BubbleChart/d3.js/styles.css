@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+circle {
+    cursor: pointer;
+}
+
+img {
+    width: 200px;
+}
+
+a {
+    color: #FFF;
+    font-weight: bold;
+    display: block;
+}
+
+span {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 2px 10px;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.tooltip {
+    position: absolute;
+    visibility: hidden;
+    background-color: #111;
+    display: flex;
+    font-family: sans-serif;
+    max-width: 500px;
+}
+
+.tooltip div {
+    padding: 10px;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.filterDiv {
+    float: left;
+    background-color: #2196F3;
+    color: #ffffff;
+    width: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 2px;
+    display: none;
+    /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+/* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+    background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+
+#list {
+    font-family: sans-serif;
+    display: none;
+    width: 50%;
+    margin: auto;
+}

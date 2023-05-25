@@ -1,74 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>💭 Bubble chart with D3.js</title>
-
-    <script src="https://d3js.org/d3.v7.js"></script>
-
-    <style>
-        body {
-            margin: 0;
-            width: 100vw;
-            height: 100vh;
-        }
-
-        circle {
-            cursor: pointer;
-        }
-
-        /* Style the buttons */
-        .btn {
-            border: none;
-            outline: none;
-            padding: 12px 16px;
-            background-color: #f1f1f1;
-            cursor: pointer;
-        }
-
-        /* Add a light grey background on mouse-over */
-        .btn:hover {
-            background-color: #ddd;
-        }
-
-        /* Add a dark background to the active button */
-        .btn.active {
-            background-color: #666;
-            color: white;
-        }
-
-        #list {
-            font-family: sans-serif;
-            display: none;
-            width: 50%;
-            margin: auto;
-        }
-    </style>
-</head>
-
-<body>
-<div id="myBtnContainer">
-    <p>Sortieren nach:</p>
-    <button class="btn active" onclick="filterSelection('all')">Show all</button>
-    <button class="btn" onclick="filterSelection('semester')">Semester</button>
-    <button class="btn" onclick="filterSelection('list')">Liste</button>
-</div>
-
-<hr>
-
-<div id="content">
-    <svg width="700" height="400">
-        <g transform="translate(50, 200)"></g>
-    </svg>
-</div>
-
-<div id="list">
-    <ul>
-    </ul>
-</div>
-<script>const width = window.innerWidth;
+const width = window.innerWidth;
 const height = window.innerHeight;
 let colorScale = ['orange', 'lightblue', '#B19CD9'];
 let xCenter = [100, 300, 500];
@@ -167,7 +97,7 @@ function filterSelection(sortAfter) {
 
             for (const item of nodes) {
                 const node = document.createElement("li");
-                const textnode = document.createTextNode(item.radius);
+                const textnode = document.createTextNode(`radius: ${item.radius}   category: ${item.category}`);
                 node.appendChild(textnode);
                 list.appendChild(node);
             }
@@ -188,7 +118,4 @@ for (let i = 0; i < btns.length; i++) {
         current[0].className = current[0].className.replace(" active", "");
         this.className += " active";
     });
-}</script>
-</body>
-
-</html>
+}

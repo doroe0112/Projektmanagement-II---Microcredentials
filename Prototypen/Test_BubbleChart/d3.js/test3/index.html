@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>💭 Bubble chart with D3.js</title>
+
+    <script src="https://d3js.org/d3.v7.js"></script>
+
+    <!--<style>
+        body {
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        circle {
+            cursor: pointer;
+        }
+
+        /* Style the buttons */
+        .btn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+
+        /* Add a light grey background on mouse-over */
+        .btn:hover {
+            background-color: #ddd;
+        }
+
+        /* Add a dark background to the active button */
+        .btn.active {
+            background-color: #666;
+            color: white;
+        }
+
+        #list {
+            font-family: sans-serif;
+            display: none;
+            width: 50%;
+            margin: auto;
+        }
+    </style>-->
+
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+<div id="myBtnContainer">
+    <p>Sortieren nach:</p>
+    <button class="btn active" onclick="filterSelection('all')">Show all</button>
+    <button class="btn" onclick="filterSelection('semester')">Semester</button>
+    <button class="btn" onclick="filterSelection('list')">Liste</button>
+</div>
+
+<hr>
+
+<div id="content">
+    <svg width="700" height="400">
+        <g transform="translate(50, 200)"></g>
+    </svg>
+</div>
+
+<div id="list">
+    <ul>
+    </ul>
+</div>
+<script src="script.js"></script>
+</body>
+
+</html>
