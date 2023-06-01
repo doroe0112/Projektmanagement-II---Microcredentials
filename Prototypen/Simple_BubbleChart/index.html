@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Bubbles</title>
+    <script src="bubbles.js"></script>
+</head>
+
+<body>
+
+<p><button type="button" onclick="setPosCircles(0)">setPos</button></p>
+<p><button type="button" onclick="drawBubbles()">drawBubbles</button></p>
+<p><button type="button" onclick="changePosCircles()">calcNew</button></p>
+<p><button type="button" onclick="clearCanvas()">clearCanvas</button></p>
+
+
+
+<p id="p1"></p>
+
+<canvas id="bubbles" width="800" height="600" style="border:1px solid #000000;">
+</canvas>
+
+<p id="debug"></p>
+
+<script>
+    // Global variables
+    var c = document.getElementById("bubbles");
+    var ctx = c.getContext("2d");
+</script>
+
+</body>
+</html>
