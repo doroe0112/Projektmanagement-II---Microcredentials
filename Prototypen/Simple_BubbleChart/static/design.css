@@ -1,0 +1,45 @@
+img {max-width:100%;height:auto;}
+p {font-size:20px;}
+button {font-size:20px;border:solid;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:#DDDDDD;text-align:center;cursor:pointer;white-space:nowrap}
+label {font-size:20px;}
+html,body{font-family:Verdana,sans-serif;font-size:20px;line-height:1.5}
+html{overflow-x:hidden}
+
+a:link, a:visited {
+  background-color: #dddddd;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.submit {
+  background-color: #dddddd;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+	font-size:20px;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
+body {
+  max-width: 960px;
+  /* margin: 4px; */
+	margin: auto;
+	border: 10px solid #ffffff;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.checklabel {
+	font-size:20px;
+}
