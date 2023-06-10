@@ -2,29 +2,70 @@
 <head>
     <title>Bubbles</title>
     <script src="bubbles.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 
 <body>
 
-<p><button type="button" onclick="setPosCircles(0)">setPos</button></p>
-<p><button type="button" onclick="drawBubbles()">drawBubbles</button></p>
-<p><button type="button" onclick="changePosCircles()">calcNew</button></p>
-<p><button type="button" onclick="clearCanvas()">clearCanvas</button></p>
+<!-- <p><button type="button" onclick="setPosCircles(0)">setPos</button></p> -->
+<!-- <p><button type="button" onclick="drawBubbles()">drawBubbles</button></p> -->
+<!-- <p><button type="button" onclick="changePosCircles()">calcNew</button></p> -->
+<!-- <p><button type="button" onclick="clearCanvas()">clearCanvas</button></p> -->
+<!-- for Funtion printTable() -->
 
+<div class="container-lg">
 
+    <!-- Banner -->
+    <img src="static/banner.jpg" class="img-fluid mb-4" alt="Ben">
 
-<p id="p1"></p>
+    <!-- Semester Buttons -->
+    <div class="my-3">
+        <a href="#" class="btn btn-info m-1">Semester I</a>
+        <a href="#" class="btn btn-info m-1">Semester II</a>
+        <a href="#" class="btn btn-info m-1">Semester III</a>
+        <a href="#" class="btn btn-info m-1">Semester IV</a>
+        <a href="#" class="btn btn-info m-1">Semester V</a>
+        <a href="#" class="btn btn-info m-1">Semester VI</a>
+    </div>
+    
+    <!-- Canvas -->
+    <canvas id="bubbles" width="800" height="600" style="border:1px solid #000000;"></canvas>
 
-<canvas id="bubbles" width="800" height="600" style="border:1px solid #000000;">
-</canvas>
+    <!-- Semester Buttons -->
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="my-3" id="skillLinks"></div>
+        </div>
+    </div>
 
-<p id="debug"></p>
+    
+
+    <p id="debug"></p>
+
+</div>
 
 <script>
     // Global variables
+    var movement = 0;
+    var moveBubbles; //time function
     var c = document.getElementById("bubbles");
     var ctx = c.getContext("2d");
+
+    // Parameter nr (0) ohne Funktion
+    setPosCircles(0);
+    drawBubbles();
+    //changeToStaticPos();
+    animatePos();
+
+    printLinks();
+    //a=document.querySelector("#p1");
+
+    // a.children[0] = <a id="1" href="#">
+    //a.children[0].addEventListener('click', alert('0 clicked'))
+
 </script>
 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -51,7 +51,8 @@ function setPosCircles(nr) {
     }
 }
 
-
+// This function changes position until movement is over 
+2500
 function changePosCircles() {
     for (i=0; i<t.length; i++) {
         for (j=0; j<t.length; j++) {
@@ -69,12 +70,75 @@ function changePosCircles() {
                 //document.getElementById("debug").innerHTML += "d: " + d + "<br>\n" + "rg: " + rg;
                 t[j].x -= xtrend*0.1; //randomMinusPlus() *
                 t[j].y -= ytrend*0.1;
+                movement++;
             }
 
         }
     }
     drawBubbles()
+
+    //console.log( movement )
+
+    if (movement > 2500) {
+        clearInterval(moveBubbles)
+    }
 }
+
+
+function animatePos() {
+    counter = 0;
+    console.log("Movement:", movement, " Counter: ", counter);
+
+    // Rufe Funktion alle 100ms wieder auf
+    moveBubbles = setInterval(changePosCircles, 100)
+
+    /*
+    while ( movement < 100 && counter < 100) {
+        //setInterval(changePosCircles, 1000);
+        changePosCircles();
+        counter++;
+    }
+    */
+
+    console.log("Movement:", movement, " Counter: ", counter);
+}
+
+
+
+function test1() {
+    movement++;
+}
+
+// Moves circles so many times till static result is reached
+function changeToStaticPos() {
+    change = 1;
+    while ( change == 1 ) {
+        change = 0;
+        for (i=0; i<t.length; i++) {
+            for (j=0; j<t.length; j++) {
+
+                xtrend = t[i].x - t[j].x
+                ytrend = t[i].y - t[j].y
+                d = (( xtrend )**2 + ( ytrend )**2)**0.5;
+
+                //same circle
+                if (d < 1.0) {
+                    continue
+                }
+                rg = t[i].r + t[j].r
+                if ( d < rg ) {
+                    //document.getElementById("debug").innerHTML += "d: " + d + "<br>\n" + "rg: " + rg;
+                    t[j].x -= xtrend*0.1; //randomMinusPlus() *
+                    t[j].y -= ytrend*0.1;
+                    change = 1;
+                }
+            }
+        }
+    }
+    drawBubbles()
+}
+
+
 
 function drawBubbles() {
     ctx.font = "12px Arial";
@@ -89,6 +153,10 @@ function drawBubbles() {
     }
 }
 
+
+function increaseBubble(nr) {
+    t[nr-1].r += 10;
+}
 
 function printaTable() {
     str1 = "<table border>\n"
@@ -127,5 +195,14 @@ function printaTable() {
     str1 += "</table>"
     document.getElementById("p1").innerHTML = str1;
     //return str1;
+  }
+
+  function printLinks() {
+    list1 = []
+    for(i=0; i<t.length; i++) {
+        list1.push('<button class="btn btn-secondary mb-2" id="b'+ t[i].id.toString() +'" onclick="increaseBubble('+ t[i].id.toString() +')">'+ t[i].name +'</button>')
+    }
+
+    document.getElementById("skillLinks").innerHTML = list1.join("\n");
   }
 
