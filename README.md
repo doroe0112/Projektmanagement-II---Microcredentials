@@ -1,13 +1,29 @@
-<p align="center">
-    <img src="https://img.shields.io/github/license/karlomikus/bar-assistant?style=for-the-badge" alt="Docker image">
-    <img src="https://img.shields.io/github/actions/workflow/status/karlomikus/bar-assistant/php.yml?branch=master&style=for-the-badge&label=Tests" alt="Tests">
-</p>
 
+
+<!-- PROJECT SHIELDS -->
+<div align="center">
+  <a href="https://github.com/doroe0112/Projektmanagement-II---Microcredentials/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/doroe0112/Projektmanagement-II---Microcredentials.svg?style=for-the-badge" alt="Contributors">
+  </a>
+  <a href="https://github.com/doroe0112/Projektmanagement-II---Microcredentials/network/members">
+    <img src="https://img.shields.io/github/forks/doroe0112/Projektmanagement-II---Microcredentials.svg?style=for-the-badge" alt="Forks">
+  </a>
+  <a href="https://github.com/doroe0112/Projektmanagement-II---Microcredentials/stargazers">
+    <img src="https://img.shields.io/github/stars/doroe0112/Projektmanagement-II---Microcredentials.svg?style=for-the-badge" alt="Stargazers">
+  </a>
+    <a href="https://github.com/doroe0112/Projektmanagement-II---Microcredentials/issues">
+    <img src="https://img.shields.io/github/issues/doroe0112/Projektmanagement-II---Microcredentials.svg?style=for-the-badge" alt="Issues">
+  </a>
+    <a href="https://github.com/doroe0112/Projektmanagement-II---Microcredentials/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/doroe0112/Projektmanagement-II---Microcredentials.svg?style=for-the-badge" alt="License">
+  </a>
+</div>
+    
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/doroe0112/Projektmanagement-II---Microcredentials">
-    <img src="images/logo.png" alt="DHBW Logo" width="80" height="80">
+    <img src="https://moodle.mosbach.dhbw.de/pluginfile.php/1/theme_adaptable/logo/1676181944/DHBW-Logo.png" alt="Logo" width="423" height="88">
   </a>
 
   <h3 align="center">Microcredentials Ausbildungsplan</h3>
@@ -27,7 +43,7 @@
 </div>
 
 ## Description
-"Aufgrund einer Umfrage in der Informatik und Wirtschaftsinformatik haben wir Informationen über skills für Microcredentials aus der Praxis Phase.  Basierend darauf möchten wir einen einheitlichen aber individuell konfigurierbaren Ausbildungsplan erstellen. "
+"Aufgrund einer Umfrage in der Informatik und Wirtschaftsinformatik haben wir Informationen über skills für Microcredentials aus der Praxis Phase.  Basierend darauf möchten wir einen einheitlichen aber individuell konfigurierbaren Ausbildungsplan erstellen."
 
 ## Features
 - 
@@ -37,7 +53,7 @@
 
 ## Documentation
 
-[Documentation is available here.](https://github.com//doroe0112/Projektmanagement-II---Microcredentials/)
+...
 
 ## Contributing
 
@@ -45,4 +61,4 @@ Feel free to create a pull request or open a issue with bugs/feature ideas.
 
 ## License
 
-Dieser Microcredentials Ausbildungsplan ist lizensiert unter der open-source [License MIT](./LICENSE).
+This project is licensed under the [MIT LICENSE](./LICENSE).
